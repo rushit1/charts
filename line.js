@@ -25,7 +25,7 @@ console.log('updateAsync() data', data)
 console.log('updateAsync() config', config)
 console.log('updateAsync() queryResponse', queryResponse)
 
-Highcharts.stockChart('container', {
+Highcharts.stockChart('amContainer', {
 
 
         rangeSelector: {
