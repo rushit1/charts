@@ -36,9 +36,8 @@ var lnData = [];
 
 for(var row of data) {
 	lnData.push({
-		
-		y: row[y].value,
-		x: row[x].value
+		x: row[x].value,
+		y: row[y].value
 	});
 	
 }
