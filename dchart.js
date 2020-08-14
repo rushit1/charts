@@ -32,7 +32,6 @@ y = config.query_fields.dimensions[1].name;
 
 	
 // build data array for the chart, by iterating over the Looker data object
-var lnData = [x,y];
 
 //for(var row of data) {
 //	lnData.push({
@@ -57,7 +56,7 @@ Highcharts.stockChart('container', {
 
         series: [{
             name: 'AAPL',
-            data: lnData,
+            data: [x,y],
             tooltip: {
                 valueDecimals: 2
             }
