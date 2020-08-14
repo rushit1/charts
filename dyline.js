@@ -43,7 +43,7 @@ for(var row of data) {
 	
 }
 	
-console.log('Chart data', lnData)
+//console.log('Chart data', lnData)
 
 Highcharts.stockChart('container', {
 
