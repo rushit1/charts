@@ -11,7 +11,7 @@ create: function(element, config) {
 	
     var container = element.appendChild(document.createElement("div"));
 	container.className = "sannith";
-    container.id = 'Container';
+    container.id = 'container';
 		
   },
 
