@@ -27,25 +27,25 @@ console.log('updateAsync() queryResponse', queryResponse)
 	
 
 // get the names of the first dimension and measure available in data
-x = config.query_fields.dimensions[0].name;
-y = config.query_fields.dimensions[1].name;
+//x = config.query_fields.dimensions[0].name;
+//y = config.query_fields.dimensions[1].name;
 
 	
 // build data array for the chart, by iterating over the Looker data object
-var lnData = [];
+//var lnData = [];
 
-for(var row of data) {
-	lnData.push({
-		
-		y: row[y].value,
-		x : row[x].value
-	});
+//for(var row of data) {
+//	lnData.push({
+//		
+//		y: row[y].value,
+//		x : row[x].value
+//	});
+//	
+//}
 	
-}
-	
-console.log('LnChart data', lnData)
+//console.log('LnChart data', lnData)
 
-let chart = Highcharts.stockChart('container', {
+Highcharts.stockChart('container', {
 
 
         rangeSelector: {
@@ -65,7 +65,7 @@ let chart = Highcharts.stockChart('container', {
         }]
     })
  
-chart.data = lnData;
+//chart.data = lnData;
 doneRendering();
 }
 })
