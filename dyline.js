@@ -32,18 +32,17 @@ y = config.query_fields.dimensions[1].name;
 
 	
 // build data array for the chart, by iterating over the Looker data object
-var lnData = [];
+//var lnData = [];
 
-for(var row of data) {
-	lnData.push({
-		x: row[x].value,
-		y: row[y].value
-	});
+//for(var row of data) {
+//	lnData.push({
+//		x: row[x].value,
+//		y: row[y].value
+//	});
 	
 }
 	
 //console.log('Chart data', lnData)
-
 Highcharts.stockChart('container', {
 
 
@@ -57,7 +56,16 @@ Highcharts.stockChart('container', {
 
         series: [{
             name: 'AAPL',
-            data: lnData,
+            data: (function () {
+                 var ldata = [],
+                 for (var row of data) {
+                  ldata.push([
+                      x: row[x].value,
+                      y: row[y].value
+                  ]);
+            }
+            return data;
+           }()),
             tooltip: {
                 valueDecimals: 2
             }
