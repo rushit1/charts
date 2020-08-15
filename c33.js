@@ -24,7 +24,7 @@ console.log('updateAsync() data', data)
 console.log('updateAsync() config', config)
 console.log('updateAsync() queryResponse', queryResponse)
 	
-	
+var tmpdaata = [["2020-06-01 00:00:00", 322.35],["2020-06-02 00:00:00", 323.44],["2020-06-03 00:00:00", 323.44],["2020-06-04 00:00:00", 323.44]]
 
 // get the names of the first dimension and measure available in data
 //x = config.query_fields.dimensions[0].name;
@@ -43,7 +43,7 @@ console.log('updateAsync() queryResponse', queryResponse)
 //	
 //}
 	
-//console.log('LnChart data', lnData)
+console.log('LnChart data', tmpdaata)
 
 Highcharts.stockChart('container', {
 
