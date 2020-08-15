@@ -35,8 +35,8 @@ y = config.query_fields.dimensions[1].name;
 var lnData = [];
 
 for(var row of data) {
-	var cell = row[queryResponse.fields.dimensions[0].name],
-	var cell = row[queryResponse.fields.dimensions[1].name]
+	var cell1 = row[queryResponse.fields.dimensions[0].name]
+	var cell2 = row[queryResponse.fields.dimensions[1].name]
 	lnData.push({
 		x: row[x].value,
 		y: row[y].value
