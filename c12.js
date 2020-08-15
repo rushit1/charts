@@ -56,7 +56,7 @@ Highcharts.stockChart('container', {
 
         series: [{
             name: 'AAPL',
-            data: [lnData],
+            data: lnData,
             tooltip: {
                 valueDecimals: 2
             }
