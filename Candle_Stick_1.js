@@ -37,7 +37,6 @@ z5 = config.query_fields.dimensions[6].name;
 	
 // build data array for the chart, by iterating over the Looker data object
 var lnData = [];
-
 for(var row of data) {
 	var cell = row[queryResponse.fields.dimensions[0].name]
 	lnData.push([
@@ -47,22 +46,22 @@ for(var row of data) {
 		row[z2].value,
 		row[z3].value
 	]);
-	
+	}
+
 var StateData = [];	
 for(var row of data) {
 	var cell = row[queryResponse.fields.dimensions[0].name]
 	StateData.push([
-		row[x].value,
-		row[z4].value
+		x     : row[x].value,
+		title : row[z4].value,
+		text  : row[z4].value
 	]);
+	}
 	
 var symbol       = row[z5].value
 var chart_title  = symbol + ' stock price'
-}
 	
 console.log('Chart data', lnData)
-console.log('state data', StateData)	
-	
 Highcharts.stockChart('container', {
 
 
@@ -92,13 +91,16 @@ Highcharts.stockChart('container', {
             name: symbol,
             type: 'candlestick',
             data: lnData,
+			  id: 'stockseries',
             tooltip: {
                 valueDecimals: 2
             }
         },
 		{
-            type: 'flag',
-            data: StateData   
+            type: 'flags',
+            data: StateData,   
+			onSeries:'stockseries',   
+            shape:'squarepin'
         }
 		]
     }) 
