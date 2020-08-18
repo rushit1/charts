@@ -51,7 +51,7 @@ for(var row of data) {
 var StateData = [];	
 for(var row of data) {
 	
-	if (row[z4]['value'] !== Null) 
+	if (row[z4]['value'] !== null) 
 	{var cell = row[queryResponse.fields.dimensions[0].name]
 	StateData.push({
 		x: row[x].value,
