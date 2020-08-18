@@ -61,6 +61,8 @@ var chart_title  = symbol + ' stock price'
 }
 	
 console.log('Chart data', lnData)
+console.log('state data', StateData)	
+	
 Highcharts.stockChart('container', {
 
 
@@ -96,7 +98,7 @@ Highcharts.stockChart('container', {
         },
 		{
             type: 'flag',
-            data: StateData,   
+            data: StateData   
         }
 		]
     }) 
