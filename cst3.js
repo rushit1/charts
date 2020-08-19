@@ -40,7 +40,7 @@ var lnData = [];
 for(var row of data) {
 	var cell = row[queryResponse.fields.dimensions[0].name]
 	lnData.push([
-		(row[x].getTime()).value,
+		row[x].value,
 		row[y].value,
 		row[z1].value,
 		row[z2].value,
@@ -54,7 +54,7 @@ for(var row of data) {
 	if (row[z4]['value'] !== null) 
 	{var cell = row[queryResponse.fields.dimensions[0].name]
 	StateData.push({
-		x: (row[x].getTime()).value,
+		x: row[x].value,
 		title: row[z4].value,
 		text: row[z4].value
 	});}
@@ -62,7 +62,7 @@ for(var row of data) {
 	
 var symbol       = row[z5].value
 var chart_title  = symbol + ' stock price'
-	
+console.log('Chart data 1', cell)	
 console.log('Chart data', lnData)
 console.log('Chart data 2', StateData)
 Highcharts.stockChart('container', {
