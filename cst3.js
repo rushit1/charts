@@ -40,7 +40,7 @@ var lnData = [];
 for(var row of data) {
 	var cell = row[queryResponse.fields.dimensions[0].name]
 	lnData.push([
-		row[x].value,
+		(row[x].getTime()).value,
 		row[y].value,
 		row[z1].value,
 		row[z2].value,
@@ -54,7 +54,7 @@ for(var row of data) {
 	if (row[z4]['value'] !== null) 
 	{var cell = row[queryResponse.fields.dimensions[0].name]
 	StateData.push({
-		x: row[x].value,
+		x: (row[x].getTime()).value,
 		title: row[z4].value,
 		text: row[z4].value
 	});}
@@ -94,16 +94,16 @@ Highcharts.stockChart('container', {
             name: symbol,
             type: 'candlestick',
             data: lnData,
-			  id: 'stockseries',
+	      id: 'stockseries',
             tooltip: {
                 valueDecimals: 2
             }
         },
-		{
+	{
             type: 'flags',
-            data: StateData 
-        }
-		]
+            data: StateData,
+	onSeries:'stockseries'	
+        }]
     }) 
 doneRendering();
 }
