@@ -28,16 +28,16 @@ console.log('updateAsync() queryResponse', queryResponse)
 
 // get the names of the first dimension and measure available in data
 
-x = config.query_fields.dimensions[0].name;     // Date
-y = config.query_fields.dimensions[1].name;     // Open
-z1 = config.query_fields.dimensions[2].name;    // High
-z2 = config.query_fields.dimensions[3].name;    // Low 
-z3 = config.query_fields.dimensions[4].name;    // Close
-z5 = config.query_fields.dimensions[5].name;    // Symbol
-z6 = config.query_fields.dimensions[6].name;    // Last Entry Date
-z7 = config.query_fields.dimensions[7].name;    // Entry Price
-z8 = config.query_fields.dimensions[8].name;    // Target Price 1
-z9 = config.query_fields.dimensions[9].name;   // Target Price 2
+x   = config.query_fields.dimensions[0].name;     // Date
+y   = config.query_fields.dimensions[1].name;     // Open
+z1  = config.query_fields.dimensions[2].name;    // High
+z2  = config.query_fields.dimensions[3].name;    // Low 
+z3  = config.query_fields.dimensions[4].name;    // Close
+z5  = config.query_fields.dimensions[5].name;    // Symbol
+z6  = config.query_fields.dimensions[6].name;    // Last Entry Date
+z7  = config.query_fields.dimensions[7].name;    // Entry Price
+z8  = config.query_fields.dimensions[8].name;    // Target Price 1
+z9  = config.query_fields.dimensions[9].name;    // Target Price 2
 z10 = config.query_fields.dimensions[10].name;  // Target Price 3
 z11 = config.query_fields.dimensions[11].name;  // Stop Loss Price 1
 z12 = config.query_fields.dimensions[12].name;  // Stop Loss Price 2
@@ -45,13 +45,13 @@ z13 = config.query_fields.dimensions[13].name;  // Stop Loss Price 3
 
 // load band variables 
 
-var t1 = row[z7].value+(row[z7].value*(row[z8].value/100))
-var t2 = row[z7].value+(row[z7].value*(row[z9].value/100))
-var t3 = row[z7].value+(row[z7].value*(row[z10].value/100))
+var ta = row[z7].value+(row[z7].value*(row[z8].value/100))
+var tb = row[z7].value+(row[z7].value*(row[z9].value/100))
+var tc = row[z7].value+(row[z7].value*(row[z10].value/100))
 
-var sl1 = row[z7].value+(row[z7].value*(row[z11].value/100))
-var sl2 = row[z7].value+(row[z7].value*(row[z12].value/100))
-var sl3 = row[z7].value+(row[z7].value*(row[z13].value/100))
+var sla = row[z7].value+(row[z7].value*(row[z11].value/100))
+var slb = row[z7].value+(row[z7].value*(row[z12].value/100))
+var slc = row[z7].value+(row[z7].value*(row[z13].value/100))
 	
 // build data array for the chart, by iterating over the Looker data object
 var lnData = [];
@@ -125,23 +125,23 @@ Highcharts.stockChart('container', {
         yAxis: {
             plotBands: [{
                     color: '#32CD32',
-                       to: t2,
-                     from: t1
+                       to: tb,
+                     from: ta
                         },
                         {
                     color: '#6FDC6F',
-                      to: t3,
-                    from: t2
+                      to: tc,
+                    from: tb
                         },
 						{
                     color: '#DE2008',
-                       to: sl2,
-                     from: sl1 
+                       to: slb,
+                     from: sla 
                         },
                         {
                     color: '#FF6347',
-                       to: sl3,
-                     from: sl2
+                       to: slc,
+                     from: slb
                         }]
                } 
     }) 
