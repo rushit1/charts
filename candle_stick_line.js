@@ -66,23 +66,23 @@ for(var row of data) {
 	]);
 	}
 
-var StateData = [];	
-for(var row of data) {
-	
-	if (row[z4]['value'] !== null) 
-	{var cell = row[queryResponse.fields.dimensions[0].name]
-	StateData.push({
-		x: row[x].value,
-		title: row[z4].value,
-		text: row[z4].value
-	});}
-	}
+//var StateData = [];	
+//for(var row of data) {
+//	
+//	if (row[z4]['value'] !== null) 
+//	{var cell = row[queryResponse.fields.dimensions[0].name]
+//	StateData.push({
+//		x: row[x].value,
+//		title: row[z4].value,
+//		text: row[z4].value
+//	});}
+//	}
 	
 var symbol       = row[z5].value
 var chart_title  = symbol + ' stock price'
 console.log('Chart data 1', cell)	
 console.log('Chart data', lnData)
-console.log('Chart data 2', StateData)
+//console.log('Chart data 2', StateData)
 Highcharts.stockChart('container', {
 
 
@@ -116,11 +116,11 @@ Highcharts.stockChart('container', {
             tooltip: {
                 valueDecimals: 2
                      }
-                },
-	            {
-           type: 'flags',
-           data: StateData,
-	       onSeries:'stockseries'	
+ //               },
+//	            {
+//           type: 'flags',
+ //          data: StateData,
+//	       onSeries:'stockseries'	
                 }],
         yAxis: {
             plotBands: [{
