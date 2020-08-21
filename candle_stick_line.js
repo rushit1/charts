@@ -45,13 +45,13 @@ z13 = config.query_fields.dimensions[13].name;  // Stop Loss Price 3
 
 // load band variables 
 
-var ta = row[z8].value;
-var tb = row[z9].value;
-var tc = row[z10].value;
+//var ta = row[z8].value;
+//var tb = row[z9].value;
+//var tc = row[z10].value;
 
-var sla = row[z11].value;
-var slb = row[z12].value;
-var slc = row[z13].value;
+//var sla = row[z11].value;
+//var slb = row[z12].value;
+//var slc = row[z13].value;
 	
 // build data array for the chart, by iterating over the Looker data object
 var lnData = [];
@@ -125,23 +125,23 @@ Highcharts.stockChart('container', {
          yAxis: {
               plotBands: [{
                       color: '#32CD32',
-                        to: tb,
-                     from: ta
+                        to: row[z9].value,
+                     from: row[z8].value
                         },
                         {
                     color: '#6FDC6F',
-                      to: tc,
-                    from: tb
+                      to: row[z10].value,
+                    from: row[z9].value
                         },
 						{
                     color: '#DE2008',
-                       to: slb,
-                     from: sla 
+                       to: row[z12].value,
+                     from: row[z11].value 
                         },
                         {
                     color: '#FF6347',
-                      to: slc,
-                   from: slb
+                      to: row[z13].value,
+                   from: row[z12].value
                         }]
               } 
     }) 
