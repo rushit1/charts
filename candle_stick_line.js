@@ -45,13 +45,13 @@ z13 = config.query_fields.dimensions[13].name;  // Stop Loss Price 3
 
 // load band variables 
 
-//var ta = row[z7].value+(row[z7].value*(row[z8].value/100))
-//var tb = row[z7].value+(row[z7].value*(row[z9].value/100))
-//var tc = row[z7].value+(row[z7].value*(row[z10].value/100))
+var ta = row[z7].value+(row[z7].value*(row[z8].value/100));
+var tb = row[z7].value+(row[z7].value*(row[z9].value/100));
+var tc = row[z7].value+(row[z7].value*(row[z10].value/100));
 
-//var sla = row[z7].value+(row[z7].value*(row[z11].value/100))
-//var slb = row[z7].value+(row[z7].value*(row[z12].value/100))
-//var slc = row[z7].value+(row[z7].value*(row[z13].value/100))
+var sla = row[z7].value+(row[z7].value*(row[z11].value/100));
+var slb = row[z7].value+(row[z7].value*(row[z12].value/100));
+var slc = row[z7].value+(row[z7].value*(row[z13].value/100));
 	
 // build data array for the chart, by iterating over the Looker data object
 var lnData = [];
@@ -121,29 +121,29 @@ Highcharts.stockChart('container', {
 //           type: 'flags',
  //          data: StateData,
 //	       onSeries:'stockseries'	
-                }]
-//        yAxis: {
-//            plotBands: [{
-//                    color: '#32CD32',
-//                       to: tb,
-//                     from: ta
-//                        },
-//                        {
-//                    color: '#6FDC6F',
-//                      to: tc,
-//                    from: tb
-//                        },
-//						{
-//                    color: '#DE2008',
-//                       to: slb,
-//                     from: sla 
-//                        },
-//                        {
-//                    color: '#FF6347',
- //                      to: slc,
-  //                   from: slb
-  //                      }]
-   //            } 
+                }],
+         yAxis: {
+              plotBands: [{
+                      color: '#32CD32',
+                        to: tb,
+                     from: ta
+                        },
+                        {
+                    color: '#6FDC6F',
+                      to: tc,
+                    from: tb
+                        },
+						{
+                    color: '#DE2008',
+                       to: slb,
+                     from: sla 
+                        },
+                        {
+                    color: '#FF6347',
+                      to: slc,
+                   from: slb
+                        }]
+              } 
     }) 
 doneRendering();
 }
