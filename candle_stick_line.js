@@ -45,13 +45,13 @@ z13 = config.query_fields.dimensions[13].name;  // Stop Loss Price 3
 
 // load band variables 
 
-var t1 = row[z8].value
-var t2 = row[z9].value
-var t3 = row[z10].value
+var t1 = row[z7].value+(row[z7].value*(row[z8].value/100))
+var t2 = row[z7].value+(row[z7].value*(row[z9].value/100))
+var t3 = row[z7].value+(row[z7].value*(row[z10].value/100))
 
-var sl1 = row[z11].value
-var sl2 = row[z12].value
-var sl3 = row[z13].value
+var sl1 = row[z7].value+(row[z7].value*(row[z11].value/100))
+var sl2 = row[z7].value+(row[z7].value*(row[z12].value/100))
+var sl3 = row[z7].value+(row[z7].value*(row[z13].value/100))
 	
 // build data array for the chart, by iterating over the Looker data object
 var lnData = [];
