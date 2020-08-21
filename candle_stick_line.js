@@ -129,7 +129,7 @@ Highcharts.stockChart('container', {
                      from: t1
                         },
                         {
-                    color: '#6FDC6F',,
+                    color: '#6FDC6F',
                       to: t3,
                     from: t2
                         },
