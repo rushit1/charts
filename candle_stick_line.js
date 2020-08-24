@@ -142,13 +142,13 @@ Highcharts.stockChart('container', {
                         },
 						{
                     color: '#DE2008',
-                       to: row[z12].value,
-                     from: row[z11].value 
+                       to: row[z11].value,
+                     from: row[z10].value 
                         },
                         {
                     color: '#FF6347',
-                      to: row[z13].value,
-                   from: row[z12].value
+                      to: row[z12].value,
+                   from: row[z11].value
                         }]
               } 
     }) 
