@@ -83,6 +83,13 @@ var chart_title  = symbol + ' stock price'
 console.log('Chart data 1', cell)	
 console.log('Chart data', lnData)
 console.log('Entry Price', row[z7].value)
+console.log('Entry Price', row[z8].value)
+console.log('Entry Price', row[z9].value)
+console.log('Entry Price', row[z10].value)
+console.log('Entry Price', row[z11].value)
+console.log('Entry Price', row[z12].value)
+console.log('Entry Price', row[z13].value)
+	
 Highcharts.stockChart('container', {
 
 
