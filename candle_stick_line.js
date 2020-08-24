@@ -132,23 +132,23 @@ Highcharts.stockChart('container', {
          yAxis: {
               plotBands: [{
                       color: '#32CD32',
-                        to: row[z9].value,
-                     from: row[z8].value
+                        from: row[z8].value,
+                        to  : row[z9].value
                         },
                         {
                     color: '#6FDC6F',
-                      to: row[z10].value,
-                    from: row[z9].value
+                    from: row[z9].value,
+                      to: row[z10].value
                         },
-						{
+			{
                     color: '#DE2008',
-                       to: row[z11].value,
-                     from: row[z10].value 
+                     from: row[z11].value,
+                       to: row[z12].value 
                         },
                         {
                     color: '#FF6347',
-                      to: row[z12].value,
-                   from: row[z11].value
+                     from: row[z12].value,
+                       to: row[z13].value
                         }]
               } 
     }) 
