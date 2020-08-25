@@ -135,21 +135,27 @@ Highcharts.stockChart('container', {
                         from: row[z8].value,
                         to  : row[z9].value
                         },
+                       console.log('b1')
+			  
                         {
                     color: '#6FDC6F',
                     from: row[z9].value,
                       to: row[z10].value
                         },
+	              console.log('b2')
 			{
                     color: '#DE2008',
                      from: row[z11].value,
                        to: row[z12].value 
                         },
+		      console.log('b3')
                         {
                     color: '#FF6347',
                      from: row[z12].value,
                        to: row[z13].value
-                        }]
+                        }
+		      console.log('b4')
+		      ]
               } 
     }) 
 doneRendering();
