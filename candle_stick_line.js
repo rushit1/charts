@@ -83,12 +83,12 @@ var chart_title  = symbol + ' stock price'
 console.log('Chart data 1', cell)	
 console.log('Chart data', lnData)
 console.log('Entry Price', row[z7].value)
-console.log('t1', row[z8].value)
-console.log('t2', row[z9].value)
-console.log('t3', row[z10].value)
-console.log('SL1', row[z11].value)
-console.log('SL2', row[z12].value)
-console.log('SL3', row[z13].value)
+console.log('s1', row[z8].value)
+console.log('s2', row[z9].value)
+console.log('s3', row[z10].value)
+console.log('t1', row[z11].value)
+console.log('t2', row[z12].value)
+console.log('t3', row[z13].value)
 	
 Highcharts.stockChart('container', {
 
@@ -122,40 +122,32 @@ Highcharts.stockChart('container', {
 	        id: 'stockseries',
             tooltip: {
                 valueDecimals: 2
-                     }
- //               },
-//	            {
-//           type: 'flags',
- //          data: StateData,
-//	       onSeries:'stockseries'	
+                     }	
                 }],
          yAxis: {
-              plotBands: [{
-                      color: '#32CD32',
-                        from: row[z8].value,
-                        to  : row[z9].value
-                        },
-                       console.log('b1')
-			  
-                        {
-                    color: '#6FDC6F',
-                    from: row[z9].value,
-                      to: row[z10].value
-                        },
-	              console.log('b2')
-			{
+              plotBands: [
+		        {
                     color: '#DE2008',
-                     from: row[z11].value,
-                       to: row[z12].value 
+                     from: row[z8].value,
+                       to: row[z9].value 
                         },
-		      console.log('b3')
                         {
                     color: '#FF6347',
-                     from: row[z12].value,
-                       to: row[z13].value
+                     from: row[z9].value,
+                       to: row[z10].value
+                        },
+		      
+		      {
+                      color: '#32CD32',
+                        from: row[z11].value,
+                        to  : row[z12].value
+                        },			  
+                        {
+                    color: '#6FDC6F',
+                    from: row[z12].value,
+                      to: row[z13].value
                         }
-		      console.log('b4')
-		      ]
+ 		      ]
               } 
     }) 
 doneRendering();
