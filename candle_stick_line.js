@@ -148,7 +148,13 @@ Highcharts.stockChart('container', {
                       to: row[z13].value
                         }
  		      ]
-              } 
+        	
+              },
+	xAxis : {plotLines: [{
+                          color: '#6FDC6F', 
+                          dashStyle: 'longdashdot', 
+                          value: row[z6].value 
+                        }]}
     }) 
 doneRendering();
 }
