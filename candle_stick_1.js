@@ -61,7 +61,7 @@ for(var row of data) {
 	}
 	
 var symbol       = row[z5].value
-var chart_title  = '$'+symbol+'S&P 500 Large Cap Index INDX'
+var chart_title  = '$'+symbol+' S&P 500 Large Cap Index INDX'
 console.log('Chart data 1', cell)	
 console.log('Chart data', lnData)
 console.log('Chart data 2', StateData)
