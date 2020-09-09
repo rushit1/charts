@@ -55,8 +55,8 @@ for(var row of data) {
 }
  
 	
-var symbol       = row[z5].value
-var label1  = symbol + ' Quaterly Net Margin and Gross Margin'
+//var symbol       = row[z5].value
+//var label1  = symbol + ' Quaterly Net Margin and Gross Margin'
 console.log('Chart data 1', cell)	
  	
  
@@ -65,10 +65,10 @@ Highcharts.chart('container', {
         zoomType: 'xy'
     },
     title: {
-        text: label1 
+        text: '' 
     },
     subtitle: {
-        text: ''
+        text: 'Quaterly Net Margin and Gross Margin Chart'
     },
     xAxis: [{
         categories: xdata,
