@@ -75,12 +75,12 @@ Highcharts.chart('container', {
         crosshair: true
     }],
     yAxis: [{ // Primary yAxis
-        labels: {
-            format: '{value}',
-            style: {
-                color: Highcharts.getOptions().colors[1]
-            }
-        },
+        //labels: {
+        //    format: '{value}%',
+        //    style: {
+        //        color: Highcharts.getOptions().colors[1]
+        //    }
+        //},
         title: {
             //text: 'Gross Margin',
             style: {
@@ -94,12 +94,12 @@ Highcharts.chart('container', {
                 color: Highcharts.getOptions().colors[0]
             }
         },
-        labels: {
-            format: '{value}',
-            style: {
-                color: Highcharts.getOptions().colors[0]
-            }
-        },
+        //labels: {
+        //    format: '{value}%',
+        //    style: {
+        //        color: Highcharts.getOptions().colors[0]
+         //   }
+        //},
         opposite: true
     }],
     tooltip: {
