@@ -83,14 +83,14 @@ Highcharts.chart('container', {
         //    }
         //},
         title: {
-            //text: 'Gross Margin',
+            text: 'Earning Move %',
             style: {
                 color: Highcharts.getOptions().colors[1]
             }
         }
     }, { // Secondary yAxis
         title: {
-            //text: 'Net Profit Margin',
+            text: 'Straddle Cost Percent',
             style: {
                 color: Highcharts.getOptions().colors[0]
             }
