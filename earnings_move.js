@@ -82,14 +82,14 @@ Highcharts.chart('container', {
             }
         },
         title: {
-            #text: 'Gross Margin',
+            //text: 'Gross Margin',
             style: {
                 color: Highcharts.getOptions().colors[1]
             }
         }
     }, { // Secondary yAxis
         title: {
-            #text: 'Net Profit Margin',
+            //text: 'Net Profit Margin',
             style: {
                 color: Highcharts.getOptions().colors[0]
             }
