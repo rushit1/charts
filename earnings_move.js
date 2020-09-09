@@ -105,17 +105,17 @@ Highcharts.chart('container', {
     tooltip: {
         shared: true
     },
-    legend: {
-        layout: 'vertical',
-        align: 'left',
-        x: 120,
-        verticalAlign: 'top',
-        y: 100,
-        floating: true,
-        backgroundColor:
-            Highcharts.defaultOptions.legend.backgroundColor || // theme
-            'rgba(255,255,255,0.25)'
-    },
+   // legend: {
+   //     layout: 'vertical',
+   //     align: 'left',
+   //     x: 120,
+   //     verticalAlign: 'top',
+   //     y: 100,
+   //     floating: true,
+   //     backgroundColor:
+   //         Highcharts.defaultOptions.legend.backgroundColor || // theme
+   //         'rgba(255,255,255,0.25)'
+   // },
     series: [{
         name: 'Straddle Cost %',
         type: 'column',
