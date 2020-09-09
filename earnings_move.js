@@ -57,7 +57,8 @@ for(var row of data) {
 	
 //var symbol       = row[z5].value
 //var label1  = symbol + ' Quaterly Net Margin and Gross Margin'
-console.log('Chart data 1', cell)	
+console.log('Chart data 1', moveper_data)	
+console.log('Chart data 1', straddle_data)	
  	
  
 Highcharts.chart('container', {
