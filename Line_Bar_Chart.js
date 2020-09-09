@@ -41,7 +41,7 @@ for(var row of data) {
 var netmargin_data = [];
 for(var row of data) {
 	var cell = row[queryResponse.fields.dimensions[1].name]
-	xdata.push([
+	netmargin_data.push([
 		row[y].value 
 	]);
 }
@@ -49,7 +49,7 @@ for(var row of data) {
 var grossmargin_data = [];
 for(var row of data) {
 	var cell = row[queryResponse.fields.dimensions[2].name]
-	xdata.push([
+	grossmargin_data.push([
 		row[z].value 
 	]);
 }
