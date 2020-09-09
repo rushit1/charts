@@ -74,34 +74,6 @@ Highcharts.chart('container', {
         categories: xdata,
         crosshair: true
     }],
-    yAxis: [{ // Primary yAxis
-        labels: {
-            format: '{value}%',
-            style: {
-                color: Highcharts.getOptions().colors[1]
-            }
-        },
-        title: {
-            //text: 'Gross Margin',
-            style: {
-                color: Highcharts.getOptions().colors[1]
-            }
-        }
-    }, { // Secondary yAxis
-        title: {
-            //text: 'Net Profit Margin',
-            style: {
-                color: Highcharts.getOptions().colors[0]
-            }
-        },
-        labels: {
-            format: '{value}%',
-            style: {
-                color: Highcharts.getOptions().colors[0]
-            }
-        },
-        opposite: true
-    }],
     tooltip: {
         shared: true
     },
