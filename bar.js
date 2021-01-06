@@ -113,7 +113,7 @@ Highcharts.chart('container', {
     },
     series: [{
         name: 'Goal',
-        color: color_data,
+        color: 'rgba(165,170,217,1)',
         data: bm_data,
         pointPadding: 0.3,
         pointPlacement: -0.2
