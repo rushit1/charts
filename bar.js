@@ -62,11 +62,35 @@ for(var row of data) {
 		row[a].value 
 	]);
 }
- 
+	
+for(var row of data) {
+	var cell = row[queryResponse.fields.dimensions[3].name]
+	bm_data.push([
+		row[a].value 
+	]);
+}
+
+fLen = grossmargin_data.length;
+var i;
+var color_data = [];
+	
+for (i = 0; i < fLen; i++) {
+  color_data.push([
+	if (grossmargin_data[i] > bm_data [i] ) {
+	    "#44cf3a";
+	} else if (grossmargin_data[i] < bm_data [i] ) {
+	  "#cf0f14";
+	} else {
+	  "#f3ff4a";
+	}
+	]);
+}
+
 	
 //var symbol       = row[z5].value
 //var label1  = symbol + ' Quaterly Net Margin and Gross Margin'
 console.log('Chart data 1', cell)	
+console.log('Color', color_data)	
  	
  
 Highcharts.chart('container', {
@@ -95,13 +119,13 @@ Highcharts.chart('container', {
     },
     series: [{
         name: 'Goal',
-        color: 'rgba(165,170,217,1)',
+        color: color_data,
         data: bm_data,
         pointPadding: 0.3,
         pointPlacement: -0.2
     }, {
         name: 'Total Count',
-        color: 'rgba(126,86,134,.9)',
+        color: color_data,
         data: grossmargin_data,
         pointPadding: 0.4,
         pointPlacement: -0.2
