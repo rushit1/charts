@@ -75,15 +75,9 @@ var i;
 var color_data = [];
 	
 for (i = 0; i < fLen; i++) {
-  color_data.push([
-	if (grossmargin_data[i] > bm_data [i] ) {
-	    "#44cf3a";
-	} else if (grossmargin_data[i] < bm_data [i] ) {
-	  "#cf0f14";
-	} else {
-	  "#f3ff4a";
-	}
-	]);
+	if (grossmargin_data[i] > bm_data [i] ) { color_data.push("#44cf3a");} 
+	else if (grossmargin_data[i] < bm_data [i] ) {color_data.push("#cf0f14");} 
+	else { color_data.push("#f3ff4a");}
 }
 
 	
