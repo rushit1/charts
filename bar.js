@@ -75,9 +75,9 @@ var i;
 var color_data = [];
 	
 for (i = 0; i < fLen; i++) {
-	if (grossmargin_data[i] > bm_data [i] ) { color_data.push("#44cf3a");} 
-	else if (grossmargin_data[i] < bm_data [i] ) {color_data.push("#cf0f14");} 
-	else { color_data.push("#f3ff4a");}
+	if (grossmargin_data[i] > bm_data [i] ) { color_data.push("{y:"+grossmargin_data[i]+",color: "+"#44cf3a");} 
+	else if (grossmargin_data[i] < bm_data [i] ) { color_data.push("{y:"+grossmargin_data[i]+",color: "+""#cf0f14"");}
+	else { color_data.push("{y:"+grossmargin_data[i]+",color: "+""#f3ff4a"");}
 }
 
 	
@@ -119,8 +119,8 @@ Highcharts.chart('container', {
         pointPlacement: -0.2
     }, {
         name: 'Total Count',
-        colors: color_data,
-        data: grossmargin_data,
+        color: 'rgba(165,170,217,1)',
+        data: color_data,
         pointPadding: 0.4,
         pointPlacement: -0.2
     }]
