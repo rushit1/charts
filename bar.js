@@ -119,7 +119,7 @@ Highcharts.chart('container', {
         pointPlacement: -0.2
     }, {
         name: 'Total Count',
-        color: color_data,
+        colors: color_data,
         data: grossmargin_data,
         pointPadding: 0.4,
         pointPlacement: -0.2
